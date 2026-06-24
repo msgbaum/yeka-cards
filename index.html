@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Love Yeka</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    min-height: 100vh;
+    background: #1a0f00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Rubik', sans-serif;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 30%, rgba(255,140,60,0.15) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 70%, rgba(100,200,180,0.10) 0%, transparent 55%);
+    pointer-events: none;
+  }
+  .page {
+    width: 100%;
+    max-width: 360px;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    position: relative;
+    z-index: 1;
+  }
+  .title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 52px;
+    letter-spacing: 4px;
+    color: #FFD700;
+    text-shadow: 0 2px 20px rgba(255,180,40,0.4);
+    line-height: 1;
+    text-align: center;
+  }
+  .nfc-icon {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nfc-icon svg {
+    width: 48px;
+    height: 48px;
+    fill: none;
+    stroke: #FFD700;
+    stroke-width: 2;
+    stroke-linecap: round;
+    opacity: 0.9;
+  }
+  .ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(255,215,0,0.4);
+    animation: pulse 2s ease-out infinite;
+  }
+  .ring:nth-child(1) { width: 56px; height: 56px; animation-delay: 0s; }
+  .ring:nth-child(2) { width: 72px; height: 72px; animation-delay: 0.5s; }
+  .ring:nth-child(3) { width: 88px; height: 88px; animation-delay: 1s; }
+  @keyframes pulse {
+    0% { transform: scale(0.8); opacity: 0.6; }
+    100% { transform: scale(1.4); opacity: 0; }
+  }
+  .instruction {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .instruction-main {
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFD700;
+    line-height: 1.4;
+  }
+  .instruction-sub {
+    font-size: 13px;
+    color: rgba(255,210,140,0.55);
+    line-height: 1.5;
+  }
+  .divider {
+    width: 40px;
+    height: 2px;
+    background: rgba(255,210,120,0.25);
+    border-radius: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="title">I Love Yeka</div>
+
+  <div class="nfc-icon">
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <svg viewBox="0 0 24 24">
+      <path d="M20 7a9 9 0 0 1 0 10M17 9.5a5.5 5.5 0 0 1 0 5M4 12h8m0 0-3-3m3 3-3 3"/>
+    </svg>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="instruction">
+    <div class="instruction-main">Поднеси свою карточку<br>к телефону</div>
+    <div class="instruction-sub">чтобы увидеть свои баллы</div>
+  </div>
+</div>
+</body>
+</html>
